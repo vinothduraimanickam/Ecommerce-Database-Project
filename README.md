@@ -2,26 +2,26 @@
 
 ## 📖 Project Overview
 
-This project demonstrates the complete lifecycle of designing, building, and analyzing a relational E-Commerce database using MySQL. It includes database creation, data import, data cleaning, relationship management, exploratory data analysis, business analysis, advanced SQL concepts, and query optimization.
+This project demonstrates the complete lifecycle of designing, building, and analyzing a relational E-Commerce database using MySQL. It covers database creation, table design, data import, data cleaning, data validation, relationship management, exploratory data analysis, business analysis, advanced SQL concepts, and query optimization.
 
 The primary objective of this project is to strengthen practical SQL skills required for Database Engineer, SQL Developer, ETL Tester, and Data Engineer roles by solving real-world business problems using SQL.
 
 ---
 
-## 🎯 Project Objectives
+# 🎯 Project Objectives
 
 - Design a relational E-Commerce database from scratch.
-- Import and transform raw CSV datasets.
-- Clean and validate data before analysis.
-- Build relationships using Foreign Keys.
+- Import raw CSV datasets into MySQL.
+- Clean and validate imported data.
+- Establish relationships using Foreign Keys.
 - Perform Exploratory Data Analysis (EDA).
-- Solve business problems using SQL.
+- Solve real-world business problems using SQL.
 - Apply advanced SQL concepts.
 - Improve query performance using indexes and execution plans.
 
 ---
 
-## 🛠 Technologies Used
+# 🛠 Technologies Used
 
 - MySQL 8.0
 - MySQL Workbench
@@ -32,7 +32,7 @@ The primary objective of this project is to strengthen practical SQL skills requ
 
 ---
 
-## 📂 Dataset
+# 📂 Dataset
 
 The project uses an E-Commerce dataset consisting of six CSV files:
 
@@ -43,13 +43,17 @@ The project uses an E-Commerce dataset consisting of six CSV files:
 - Inventory Items
 - Distribution Centers
 
-The raw CSV files were imported into MySQL and cleaned before analysis.
+The CSV files were imported into MySQL and cleaned before analysis.
 
+> **Note**
+>
+> The **inventory_items.csv** file is approximately **90 MB**, which exceeds GitHub's web upload size limit. Therefore, it is not included in this repository.
+>
 ---
 
 # 📁 Project Structure
 
-```
+```text
 Ecommerce-Database-Project
 │
 ├── 01_Dataset
@@ -61,16 +65,17 @@ Ecommerce-Database-Project
 │   └── Database Schema Design
 │
 ├── 03_SQL_Scripts
-│   ├── Create Database
-│   ├── Create Tables
-│   ├── Import Data
-│   ├── Data Cleaning
-│   ├── Add Foreign Keys
-│   ├── Data Validation
-│   ├── Exploratory Data Analysis
-│   └── Business Analysis
+│   ├── 01_Create_Database.sql
+│   ├── 02_Create_Tables.sql
+│   ├── 03_Import_Data.sql
+│   ├── 04_Data_Transformation_Cleaning.sql
+│   ├── 05_Add_Foreign_Keys.sql
+│   ├── 06_Data_Validation.sql
+│   ├── 07_Exploratory_Data_Analysis.sql
+│   └── 08_Business_Analysis.sql
 │
 ├── 04_ER_Diagram
+│   └── ER_Diagram.png
 │
 ├── 05_Screenshots
 │
@@ -96,40 +101,46 @@ The tables are connected using Primary Keys and Foreign Keys to maintain referen
 
 # 📊 Entity Relationship Diagram (ERD)
 
-![ER Diagram](04_ER_Diagram/ER_Diagram.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/04_ER_Diagram/01_ER_Diagram.png" style="width:100%; max-width:100%;"/>
 
 ---
 
 # 🔄 Project Workflow
 
-### 1. Database Creation
+### Step 1: Database Creation
 
-- Created the E-Commerce database.
-- Designed relational tables.
+- Created the E-Commerce database using SQL.
 
-### 2. Data Import
+### Step 2: Table Creation
 
-- Imported six CSV datasets into MySQL.
+- Designed and created all relational tables.
+- Defined appropriate data types and Primary Keys.
 
-### 3. Data Cleaning
+### Step 3: Import CSV Data
+
+- Imported the CSV files into their respective tables using SQL queries (`LOAD DATA INFILE`).
+
+### Step 4: Data Cleaning & Transformation
 
 - Removed invalid values.
-- Replaced blank values with NULL.
-- Converted VARCHAR date columns into DATETIME.
+- Replaced blank values with `NULL`.
+- Converted `VARCHAR` date columns to `DATETIME`.
 - Removed timezone values from datetime columns.
+- Standardized the imported data.
 
-### 4. Relationship Management
+### Step 5: Relationship Management
 
 - Added Foreign Keys.
-- Maintained referential integrity.
+- Maintained referential integrity between tables.
 
-### 5. Data Validation
+### Step 6: Data Validation
 
 - Verified imported records.
 - Checked NULL values.
 - Validated relationships.
+- Confirmed data consistency.
 
-### 6. Exploratory Data Analysis
+### Step 7: Exploratory Data Analysis (EDA)
 
 Performed SQL queries to understand:
 
@@ -139,9 +150,9 @@ Performed SQL queries to understand:
 - Inventory
 - Revenue
 
-### 7. Business Analysis
+### Step 8: Business Analysis
 
-Solved more than **100 real-world SQL business questions** including:
+Solved more than **80+ real-world SQL business questions**, including:
 
 - Sales Analysis
 - Customer Analysis
@@ -149,7 +160,7 @@ Solved more than **100 real-world SQL business questions** including:
 - Inventory Analysis
 - Distribution Center Analysis
 
-### 8. Advanced SQL
+### Step 9: Advanced SQL
 
 Applied advanced SQL concepts including:
 
@@ -159,7 +170,7 @@ Applied advanced SQL concepts including:
 - Stored Procedures
 - Constraints
 
-### 9. Query Optimization
+### Step 10: Query Optimization
 
 Improved query performance using:
 
@@ -223,15 +234,15 @@ Improved query performance using:
 ## Views
 
 - CREATE VIEW
-- Query reusable reports
+- Reusable reporting queries
 
 ## Stored Procedures
 
 - IN Parameters
 - OUT Parameters
 - Variables
-- IF...ELSE
-- SELECT INTO
+- IF...ELSEIF...ELSE
+- SELECT...INTO
 
 ## Constraints
 
@@ -253,87 +264,93 @@ Improved query performance using:
 
 ## Database Overview
 
-![Database](05_Screenshots/01_Database_Overview.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/01_Database%20Overview.png"/>
 
 ---
 
 ## Tables
 
-![Tables](05_Screenshots/02_Tables.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/02_Tables.png" />
 
 ---
 
 ## ER Diagram
 
-![ERD](05_Screenshots/03_ER_Diagram.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/03_ER_Diagram.png" />
 
 ---
 
 ## Data Cleaning
 
-![Cleaning](05_Screenshots/04_Data_Cleaning.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/04_Data%20Cleaning.png" />
 
 ---
 
 ## Foreign Keys
 
-![FK](05_Screenshots/05_Foreign_Keys.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/05_Foreign%20Keys.png"/>
 
 ---
 
 ## Business Analysis
 
-![Business Analysis](05_Screenshots/06_Business_Analysis.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/06_Business%20Analysis.png"/>
 
 ---
 
 ## Window Functions
 
-![Window Functions](05_Screenshots/07_Window_Functions.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/07_Window%20Functions.png"/>
 
 ---
 
 ## Views
 
-![Views](05_Screenshots/08_Views.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/08_Views.png"/>
 
 ---
 
 ## Stored Procedures
 
-![Stored Procedures](05_Screenshots/09_Stored_Procedures.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/09_Stored%20Procedures.png"/>
 
 ---
 
 ## Query Optimization
 
-![Query Optimization](05_Screenshots/10_Query_Optimization.png)
+ <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/10_Query%20Optimization.png"/>
 
 ---
 
 # 📈 Project Highlights
 
 - Designed a relational E-Commerce database from scratch.
-- Imported and transformed multiple CSV datasets.
-- Cleaned and validated data before analysis.
+- Imported and transformed multiple CSV datasets into MySQL.
+- Cleaned and validated raw data before analysis.
 - Implemented Primary Keys and Foreign Keys.
-- Solved **100+ SQL business questions**.
-- Applied advanced SQL concepts including CTEs, Window Functions, Views, and Stored Procedures.
-- Optimized SQL queries using Indexes and EXPLAIN.
-- Created complete project documentation and ER Diagram.
+- Solved **80+ real-world SQL business questions**.
+- Applied advanced SQL concepts including CTEs, Window Functions, Views, Stored Procedures, and Constraints.
+- Optimized SQL query performance using Indexes and EXPLAIN.
+- Created complete project documentation, ER Diagram, and business reports.
 
 ---
 
 # 🎯 Skills Demonstrated
 
 - Database Design
+- Relational Database Modeling
 - SQL Query Writing
+- Data Import
 - Data Cleaning
 - Data Validation
-- Data Analysis
+- Exploratory Data Analysis
 - Business Analysis
+- Window Functions
+- Common Table Expressions (CTEs)
+- Views
+- Stored Procedures
+- Constraints
 - Query Optimization
-- Relational Database Design
 - Performance Tuning
 - Documentation
 
@@ -342,10 +359,10 @@ Improved query performance using:
 # 🚀 Future Enhancements
 
 - Build an interactive Power BI dashboard.
-- Automate data loading using Python ETL.
-- Deploy the database on a cloud platform.
-- Add Triggers and Events.
-- Extend the project with additional business reports.
+- Develop an automated ETL pipeline using Python.
+- Deploy the database to a cloud platform.
+- Implement Triggers and Events.
+- Expand the project with additional business reports and dashboards.
 
 ---
 
@@ -353,9 +370,7 @@ Improved query performance using:
 
 **Vinoth Duraimanickam**
 
-- LinkedIn: *(Add your LinkedIn URL)*
-- GitHub: *(Add your GitHub URL)*
+- LinkedIn: *(Add your LinkedIn Profile URL)*
+- GitHub: *(Add your GitHub Profile URL)*
 
 ---
-
-## ⭐ If you found this project useful, consider giving it a star.

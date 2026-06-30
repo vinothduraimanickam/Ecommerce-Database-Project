@@ -370,7 +370,7 @@ Improved query performance using:
 
 **Vinoth Duraimanickam**
 
-- LinkedIn: *(Add your LinkedIn Profile URL)*
-- GitHub: *(Add your GitHub Profile URL)*
+- LinkedIn: https://www.linkedin.com/in/vinothduraimanickam/
+- GitHub: https://github.com/vinothduraimanickam/
 
 ---

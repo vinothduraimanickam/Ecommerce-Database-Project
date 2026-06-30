@@ -280,7 +280,7 @@ Improved query performance using:
 
 ---
 
-## Data Cleaning
+## Data_Transformation_Cleaning
 
  <img src="https://raw.githubusercontent.com/vinothduraimanickam/Ecommerce-Database-Project/refs/heads/main/05_Screenshots/04_Data%20Cleaning.png" />
 
